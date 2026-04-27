@@ -13,3 +13,13 @@ composer install
 php artisan migrate
 php artisan test (Please check for all passing)
 
+Section 2
+---------------
+React + TypeScript
+Leave Application Wizard with Approval Queue
+
+Run:
+cd section2
+npm install
+npm run dev
+
