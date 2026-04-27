@@ -4,7 +4,7 @@
 
 ------------------------------------------------------------------------
 
-# 🅿️ Part A --- Single Session Enforcement
+# Part A --- Single Session Enforcement
 
 ## 1. Store Session in Redis (8-hour TTL)
 
