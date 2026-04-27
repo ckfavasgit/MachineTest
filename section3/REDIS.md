@@ -1,4 +1,4 @@
-# 🔴 SECTION 3 (Redis)
+# SECTION 3 (Redis)
 
 ## Employee Session Control + Live Attendance Counter
 
@@ -6,7 +6,7 @@
 
 # 🅿️ Part A --- Single Session Enforcement
 
-## ✅ 1. Store Session in Redis (8-hour TTL)
+## 1. Store Session in Redis (8-hour TTL)
 
 ``` php
 use Illuminate\Support\Facades\Redis;
@@ -40,7 +40,7 @@ public function login(Request $request)
 
 ------------------------------------------------------------------------
 
-## ✅ 2. Middleware to Validate Session
+## 2. Middleware to Validate Session
 
 ``` php
 class ValidateEmployeeSession
@@ -66,19 +66,19 @@ class ValidateEmployeeSession
 
 ------------------------------------------------------------------------
 
-# 🟢 Part B --- Live Attendance Counter
+# Part B --- Live Attendance Counter
 
-## ✅ Redis Key
+## Redis Key
 
 attendance:summary:{date}
 
-## ✅ Fields
+## Fields
 
 present, absent, on_leave
 
 ------------------------------------------------------------------------
 
-## ✅ Punch-In Logic
+## Punch-In Logic
 
 ``` php
 Redis::hincrby($key, 'present', 1);
@@ -86,7 +86,7 @@ Redis::hincrby($key, 'present', 1);
 
 ------------------------------------------------------------------------
 
-## ✅ Live Summary API
+## Live Summary API
 
 ``` php
 $data = Redis::hgetall($key);
@@ -94,7 +94,7 @@ $data = Redis::hgetall($key);
 
 ------------------------------------------------------------------------
 
-## ✅ Rehydration Logic
+## Rehydration Logic
 
 ``` php
 Redis::hmset($key, [
@@ -106,13 +106,13 @@ Redis::hmset($key, [
 
 ------------------------------------------------------------------------
 
-# ⚠️ Risk
+# Risk
 
 -   Redis is in-memory → data loss on restart
 
 ------------------------------------------------------------------------
 
-# ✅ Mitigation
+# Mitigation
 
 -   Enable RDB / AOF
 -   Use DB as source of truth
