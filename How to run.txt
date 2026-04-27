@@ -23,3 +23,19 @@ cd section2
 npm install
 npm run dev
 
+Section 3
+---------------
+Redis
+Employee Session Control + Live Attendance Counter
+
+Please review the MD file for the Redis-based implementation of Employee Session Control and Live Attendance Counter.
+
+Section 4
+---------------
+System Design
+HRMS Notification Engine Design
+
+Please review the MD file.
+
+
+
