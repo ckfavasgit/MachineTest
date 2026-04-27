@@ -1,0 +1,15 @@
+How to run:
+
+Section 1
+---------------
+Laravel — Backend
+Option A — Multi-Level Leave Approval Workflow
+
+Configure DB in .env (currently set for MySQL database as leave_workflow)
+
+Run:
+cd section1 
+composer install
+php artisan migrate
+php artisan test (Please check for all passing)
+
